@@ -76,6 +76,69 @@ python main.py --query "What is thrombosis?" --skip-search
 3. **Submit a pull request**
 
 ---
+
+
+
+## ** Example Output/Usage**
+
+Below is a sample output from running the script `llm.py` when asked, "Who won the 2025 Champions Trophy final?":
+
+```plaintext
+Users\prajv\Downloads\rag> python llm.py
+Enter your question: who won the 2025 champions trophy final 
+
+📝 Generating answer to your question...
+⚠️ Database is empty. Automatically fetching data...
+🔍 Searching for: 'who won the 2025 champions trophy final '
+✅ Scraping and preprocessing text from websites... please wait
+1. 2025 ICC Champions Trophy - Wikipedia
+   Link: https://en.wikipedia.org/wiki/2025_ICC_Champions_Trophy
+   Snippet: India became the champions by defeating New Zealand in the final and also became the first team to w...
+📄 Scraping: https://en.wikipedia.org/wiki/2025_ICC_Champions_Trophy
+✅ Extracted Summary: Ninth edition of the ICC Champions Trophy Cricket tournament The 2025 ICC Champions Trophy was the n...
+✅ Summary stored in DB for: 2025 ICC Champions Trophy - Wikipedia
+2. ICC Champions Trophy, 2025 schedule, live scores and results ...
+   Link: https://www.cricbuzz.com/cricket-series/9325/icc-champions-trophy-2025/matches
+   Snippet: ICC Champions Trophy, 2025 Schedule, Match Timings, Venue Details, Upcoming Cricket Matches and Rece...
+📄 Scraping: https://www.cricbuzz.com/cricket-series/9325/icc-champions-trophy-2025/matches
+✅ Extracted Summary: Team All New Zealand Pakistan Bangladesh India South Africa Afghanistan England Australia Venues All...
+✅ Summary stored in DB for: ICC Champions Trophy, 2025 schedule, live scores and results ...
+3. ICC Champions Trophy - Wikipedia
+   Link: https://en.wikipedia.org/wiki/ICC_Champions_Trophy
+   Snippet: India (2002,2013,2025) is the most successful team with three titles, Australia (2006,2009) has won ...
+📄 Scraping: https://en.wikipedia.org/wiki/ICC_Champions_Trophy
+✅ Extracted Summary: International ODI cricket tournament Cricket tournament The ICC Champions Trophy, formerly known as ...
+✅ Summary stored in DB for: ICC Champions Trophy - Wikipedia
+4. Official fixtures announced for ICC Men's Champions Trophy 2025
+   Link: https://www.icc-cricket.com/tournaments/champions-trophy-2025/news/official-fixtures-announced-for-icc-champions-trophy-2025
+   Snippet: Dec 24, 2024 ... The ICC Champions Trophy 2025 fixtures and groupings have been announced by the ICC...
+📄 Scraping: https://www.icc-cricket.com/tournaments/champions-trophy-2025/news/official-fixtures-announced-for-icc-champions-trophy-2025
+❌ Skipping invalid page: https://www.icc-cricket.com/tournaments/champions-trophy-2025/news/official-fixtures-announced-for-icc-champions-trophy-2025
+❌ Failed to scrape https://www.icc-cricket.com/tournaments/champions-trophy-2025/news/official-fixtures-announced-for-icc-champions-trophy-2025
+5. ICC Champions Trophy 2025 final: India beat New Zealand by four ...
+   Link: https://www.aljazeera.com/sports/2025/3/9/icc-champions-trophy-2025-final-india-beats-new-zealand-by-four-wickets
+   Snippet: Mar 9, 2025 ... ICC Champions Trophy 2025 final: India beat New Zealand by four wickets. India overc...
+📄 Scraping: https://www.aljazeera.com/sports/2025/3/9/icc-champions-trophy-2025-final-india-beats-new-zealand-by-four-wickets
+✅ Extracted Summary: ICC Champions Trophy 2025 final: India beat New Zealand by four wicketsIndia overcome New Zealand’s ...
+✅ Summary stored in DB for: ICC Champions Trophy 2025 final: India beat New Zealand by four ...
+✅ Preprocessed text saved to 'preprocessed_text.txt'
+✅ Successfully added 4 documents to DB
+🧠 Loading models...
+
+Sources used:
+1. 2025 ICC Champions Trophy - Wikipedia (https://en.wikipedia.org/wiki/2025_ICC_Champions_Trophy)
+2. ICC Champions Trophy 2025 final: India beat New Zealand by four ... (https://www.aljazeera.com/sports/2025/3/9/icc-champions-trophy-2025-final-india-beats-new-zealand-by-four-wickets)
+3. ICC Champions Trophy - Wikipedia (https://en.wikipedia.org/wiki/ICC_Champions_Trophy)
+💭 Generating answer...
+
+🤖 Answer:
+Answer: India defeated New Zealand by four wickets in the 2025 Champions Trophy final in Dubai.
+
+Sources: Check the output above for the sources used to generate this answer.
+
+### Why Some Websites Were Not Scraped
+
+In the sample output above, you’ll notice that one website (`https://www.icc-cricket.com/tournaments/champions-trophy-2025/news/official-fixtures-announced-for-icc-champions-trophy-2025`) was skipped, as indicated by the messages "❌ Skipping invalid page" and "❌ Failed to scrape." This happens because the system respects the `robots.txt` file of websites. The `robots.txt` file is a standard used by website owners to instruct web crawlers and scrapers about which parts of the site they are allowed to access. If a website’s `robots.txt` disallows scraping for certain pages or the entire site, the system skips those pages to comply with these restrictions. This ensures ethical scraping practices and adherence to the website’s policies.
+
+
 ⭐ **If you find this project useful, don't forget to give it a star!** ⭐
-
-
