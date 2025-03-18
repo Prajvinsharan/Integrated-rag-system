@@ -32,7 +32,7 @@ Ensure you have the following installed:
 ### **Setup**
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/your-username/integrated-rag-system.git
+   git clone https://github.com/Prajvinsharan/integrated-rag-system.git
    cd integrated-rag-system
    ```
 2. **Install dependencies:**
@@ -77,3 +77,5 @@ python main.py --query "What is thrombosis?" --skip-search
 
 ---
 ⭐ **If you find this project useful, don't forget to give it a star!** ⭐
+
+
