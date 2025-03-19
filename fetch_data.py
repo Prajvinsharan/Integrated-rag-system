@@ -11,10 +11,18 @@ from chromadb.config import Settings
 from sentence_transformers import SentenceTransformer
 import uuid
 import argparse
+from dotenv import load_dotenv
 
-# Google Search API credentials (replace with your own)
-API_KEY = "AIzaSyDr3qaIpGj0wCtvvL2r7T2bZervAd2vy_k"  # Replace with your actual API key
-SEARCH_ENGINE_ID = "f26a96103e50049ec"  # Replace with your actual search engine ID
+
+# Load environment variables from .env file
+load_dotenv()
+
+# Google Search API credentials (loaded from .env)
+API_KEY = os.getenv("GOOGLE_API_KEY")
+SEARCH_ENGINE_ID = os.getenv("GOOGLE_CSE_ID")
+
+if not API_KEY or not SEARCH_ENGINE_ID:
+    raise ValueError("❌ API_KEY or SEARCH_ENGINE_ID not set. Make sure to create a .env file!")
 
 def google_search(query):
     print(f"🔍 Searching for: '{query}'")
