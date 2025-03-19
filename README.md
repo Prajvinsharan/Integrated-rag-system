@@ -136,7 +136,9 @@ Answer: India defeated New Zealand by four wickets in the 2025 Champions Trophy 
 
 Sources: Check the output above for the sources used to generate this answer.
 
-### Why Some Websites Were Not Scraped
+
+
+## Why Some Websites Were Not Scraped
 
 In the sample output above, you’ll notice that one website (`https://www.icc-cricket.com/tournaments/champions-trophy-2025/news/official-fixtures-announced-for-icc-champions-trophy-2025`) was skipped, as indicated by the messages "❌ Skipping invalid page" and "❌ Failed to scrape." This happens because the system respects the `robots.txt` file of websites. The `robots.txt` file is a standard used by website owners to instruct web crawlers and scrapers about which parts of the site they are allowed to access. If a website’s `robots.txt` disallows scraping for certain pages or the entire site, the system skips those pages to comply with these restrictions. This ensures ethical scraping practices and adherence to the website’s policies.
 
